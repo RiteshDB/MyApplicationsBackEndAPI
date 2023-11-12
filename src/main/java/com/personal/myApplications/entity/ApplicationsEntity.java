@@ -15,7 +15,7 @@ public class ApplicationsEntity {
     private String companyName;
     @Column(length = 20, nullable = false)
     private String platform;
-    private LocalDate appliedDate;
+    private String appliedDate;
 
     @Column(length = 10)
     private String Applicationstatus;
@@ -46,11 +46,11 @@ public class ApplicationsEntity {
         this.platform = platform;
     }
 
-    public LocalDate getAppliedDate() {
+    public String getAppliedDate() {
         return appliedDate;
     }
 
-    public void setAppliedDate(LocalDate appliedDate) {
+    public void setAppliedDate(String appliedDate) {
         this.appliedDate = appliedDate;
     }
 
@@ -80,7 +80,7 @@ public class ApplicationsEntity {
 
     public ApplicationsEntity(){}
 
-    public ApplicationsEntity(int serialNo, String companyName, String platform, LocalDate appliedDate, String applicationstatus, boolean accepted, boolean rejected) {
+    public ApplicationsEntity(int serialNo, String companyName, String platform, String appliedDate, String applicationstatus, boolean accepted, boolean rejected) {
         this.serialNo = serialNo;
         this.companyName = companyName;
         this.platform = platform;
