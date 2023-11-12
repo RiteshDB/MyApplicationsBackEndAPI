@@ -2,6 +2,7 @@ package com.personal.myApplications.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 
 
 @Entity
@@ -14,7 +15,7 @@ public class ApplicationsEntity {
     private String companyName;
     @Column(length = 20, nullable = false)
     private String platform;
-    private String appliedDate;
+    private LocalDate appliedDate;
 
     @Column(length = 10)
     private String Applicationstatus;
@@ -45,11 +46,11 @@ public class ApplicationsEntity {
         this.platform = platform;
     }
 
-    public String getAppliedDate() {
+    public LocalDate getAppliedDate() {
         return appliedDate;
     }
 
-    public void setAppliedDate(String appliedDate) {
+    public void setAppliedDate(LocalDate appliedDate) {
         this.appliedDate = appliedDate;
     }
 
@@ -77,7 +78,9 @@ public class ApplicationsEntity {
         this.rejected = rejected;
     }
 
-    public ApplicationsEntity(int serialNo, String companyName, String platform, String appliedDate, String applicationstatus, boolean accepted, boolean rejected) {
+    public ApplicationsEntity(){}
+
+    public ApplicationsEntity(int serialNo, String companyName, String platform, LocalDate appliedDate, String applicationstatus, boolean accepted, boolean rejected) {
         this.serialNo = serialNo;
         this.companyName = companyName;
         this.platform = platform;

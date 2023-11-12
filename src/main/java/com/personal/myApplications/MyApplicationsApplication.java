@@ -19,12 +19,14 @@ public class MyApplicationsApplication {
 		ApplicationService service = context.getBean(ApplicationService.class);
 		//System.out.println("Project is created successfully and applicationsEntity is created successfully " + service);
 
-		ApplicationsEntity entity = new ApplicationsEntity(1, "Accenture", "Campus", "11/12/2023","Completed",true,false);
+		ApplicationsEntity entity = new ApplicationsEntity(1, "Accenture", "Campus", LocalDate.now(),"Completed",true,false);
 
 		ApplicationsEntity newEntry = service.insertApplicationDetails(entity);
 		if(newEntry != null){
 			System.out.println("Entry is created successfully");
 		}
+
+
 	}
 
 }
